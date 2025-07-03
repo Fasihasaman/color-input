@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color-input</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="color"] {
+            width: 100px;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #141313;
+            text-shadow: 1px 1px 2px wheat;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Choose a Background Color</h1>
+
+    <input type="color" id="color-input" value="#ff0000">
+
+    <script>
+        const colorInput = document.querySelector('#color-input');
+
+        colorInput.addEventListener('input', () => {
+            document.body.style.backgroundColor = colorInput.value;
+        });
+
+
+    </script>
+
+</body>
+
+</html>
